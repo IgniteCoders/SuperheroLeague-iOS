@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,6 +20,14 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
         
         searchSuperheroesBy(name: "a")
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.delegate = self
+        self.navigationItem.searchController = searchController
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchSuperheroesBy(name: searchBar.text ?? "a")
     }
     
     func searchSuperheroesBy(name: String) {
@@ -29,6 +37,16 @@ class ViewController: UIViewController, UITableViewDataSource {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail" {
+            let detailVC = segue.destination as! DetailViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            let superhero = superheroList[indexPath.row]
+            detailVC.superhero = superhero
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 
