@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CCEB96C2DDF37F700C55594 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEB96B2DDF37F700C55594 /* CardView.swift */; };
 		6CD54FA42DDDDCDA004A1001 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD54FA32DDDDCDA004A1001 /* DetailViewController.swift */; };
 		6CDEC1FB2DDC73D00062B7B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDEC1FA2DDC73D00062B7B1 /* AppDelegate.swift */; };
 		6CDEC1FD2DDC73D00062B7B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDEC1FC2DDC73D00062B7B1 /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6CCEB96B2DDF37F700C55594 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		6CD54FA32DDDDCDA004A1001 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6CDEC1F72DDC73D00062B7B1 /* SuperheroLeague-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SuperheroLeague-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDEC1FA2DDC73D00062B7B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				6CDEC2142DDC83690062B7B1 /* UIImageViewExtensions.swift */,
+				6CCEB96B2DDF37F700C55594 /* CardView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CDEC2152DDC83690062B7B1 /* UIImageViewExtensions.swift in Sources */,
+				6CCEB96C2DDF37F700C55594 /* CardView.swift in Sources */,
 				6CDEC1FF2DDC73D00062B7B1 /* ListViewController.swift in Sources */,
 				6CDEC1FB2DDC73D00062B7B1 /* AppDelegate.swift in Sources */,
 				6CDEC2112DDC7A170062B7B1 /* SuperheroResponse.swift in Sources */,
