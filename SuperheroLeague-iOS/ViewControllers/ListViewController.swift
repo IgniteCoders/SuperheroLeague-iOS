@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
+class ListViewController: UIViewController, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var superheroList: [Superhero] = []
 
@@ -17,7 +18,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        tableView.dataSource = self
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
         searchSuperheroesBy(name: "a")
         
@@ -35,27 +37,45 @@ class ListViewController: UIViewController, UITableViewDataSource, UISearchBarDe
             superheroList = await SuperheroProvider.findSuperheroesByName(query: name)
             
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self.collectionView.reloadData()
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detail" {
+        if segue.identifier == "Detail" {
             let detailVC = segue.destination as! DetailViewController
-            let indexPath = tableView.indexPathForSelectedRow!
+            let indexPath = collectionView.indexPathsForSelectedItems![0]
             let superhero = superheroList[indexPath.row]
             detailVC.superhero = superhero
-            tableView.deselectRow(at: indexPath, animated: true)
+            collectionView.deselectItem(at: indexPath, animated: true)
         }
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let columns = switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
+        case .phone:
+            2
+        default:
+            5
+        }
+        
+        let spacing = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).minimumInteritemSpacing
+        let screenWidth = collectionView.frame.size.width
+        var leftSpace = screenWidth - spacing * CGFloat(columns + 1)
+        leftSpace -= 1
+        let width = leftSpace / CGFloat(columns) //some width
+        let height = width * 1.33 //ratio
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         superheroList.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SuperheroViewCell", for: indexPath) as! SuperheroViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SuperheroViewCell", for: indexPath) as! SuperheroViewCell
         let superhero = superheroList[indexPath.row]
         cell.render(superhero: superhero)
         return cell

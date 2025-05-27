@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6CCEB96C2DDF37F700C55594 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEB96B2DDF37F700C55594 /* CardView.swift */; };
 		6CD54FA42DDDDCDA004A1001 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD54FA32DDDDCDA004A1001 /* DetailViewController.swift */; };
+		6CD6469E2DE5AF2600DC6863 /* SuperheroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD6469D2DE5AF2600DC6863 /* SuperheroViewCell.swift */; };
 		6CDEC1FB2DDC73D00062B7B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDEC1FA2DDC73D00062B7B1 /* AppDelegate.swift */; };
 		6CDEC1FD2DDC73D00062B7B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDEC1FC2DDC73D00062B7B1 /* SceneDelegate.swift */; };
 		6CDEC1FF2DDC73D00062B7B1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDEC1FE2DDC73D00062B7B1 /* ListViewController.swift */; };
@@ -17,13 +18,13 @@
 		6CDEC2072DDC73D10062B7B1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6CDEC2062DDC73D10062B7B1 /* Base */; };
 		6CDEC20F2DDC74BD0062B7B1 /* SuperheroProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDEC20E2DDC74BD0062B7B1 /* SuperheroProvider.swift */; };
 		6CDEC2112DDC7A170062B7B1 /* SuperheroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDEC2102DDC7A170062B7B1 /* SuperheroResponse.swift */; };
-		6CDEC2132DDC80390062B7B1 /* SuperheroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDEC2122DDC80390062B7B1 /* SuperheroViewCell.swift */; };
 		6CDEC2152DDC83690062B7B1 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDEC2142DDC83690062B7B1 /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6CCEB96B2DDF37F700C55594 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		6CD54FA32DDDDCDA004A1001 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6CD6469D2DE5AF2600DC6863 /* SuperheroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewCell.swift; sourceTree = "<group>"; };
 		6CDEC1F72DDC73D00062B7B1 /* SuperheroLeague-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SuperheroLeague-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDEC1FA2DDC73D00062B7B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CDEC1FC2DDC73D00062B7B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		6CDEC2082DDC73D10062B7B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CDEC20E2DDC74BD0062B7B1 /* SuperheroProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroProvider.swift; sourceTree = "<group>"; };
 		6CDEC2102DDC7A170062B7B1 /* SuperheroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroResponse.swift; sourceTree = "<group>"; };
-		6CDEC2122DDC80390062B7B1 /* SuperheroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewCell.swift; sourceTree = "<group>"; };
 		6CDEC2142DDC83690062B7B1 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,7 +120,7 @@
 		6CDEC21A2DDC84F60062B7B1 /* ViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				6CDEC2122DDC80390062B7B1 /* SuperheroViewCell.swift */,
+				6CD6469D2DE5AF2600DC6863 /* SuperheroViewCell.swift */,
 			);
 			path = ViewCells;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 				6CCEB96C2DDF37F700C55594 /* CardView.swift in Sources */,
 				6CDEC1FF2DDC73D00062B7B1 /* ListViewController.swift in Sources */,
 				6CDEC1FB2DDC73D00062B7B1 /* AppDelegate.swift in Sources */,
+				6CD6469E2DE5AF2600DC6863 /* SuperheroViewCell.swift in Sources */,
 				6CDEC2112DDC7A170062B7B1 /* SuperheroResponse.swift in Sources */,
 				6CDEC20F2DDC74BD0062B7B1 /* SuperheroProvider.swift in Sources */,
-				6CDEC2132DDC80390062B7B1 /* SuperheroViewCell.swift in Sources */,
 				6CDEC1FD2DDC73D00062B7B1 /* SceneDelegate.swift in Sources */,
 				6CD54FA42DDDDCDA004A1001 /* DetailViewController.swift in Sources */,
 			);

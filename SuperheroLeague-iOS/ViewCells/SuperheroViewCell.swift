@@ -2,12 +2,12 @@
 //  SuperheroViewCell.swift
 //  SuperheroLeague-iOS
 //
-//  Created by Mañanas on 20/5/25.
+//  Created by Mañanas on 27/5/25.
 //
 
 import UIKit
 
-class SuperheroViewCell: UITableViewCell {
+class SuperheroViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var shadowView: UIView!
@@ -32,11 +32,4 @@ class SuperheroViewCell: UITableViewCell {
         shadowView.layer.shadowOffset = CGSize(width: 4, height: 4)
         shadowView.layer.shadowOpacity = 0.5
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

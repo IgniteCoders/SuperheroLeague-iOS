@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,33 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="240" estimatedRowHeight="240" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rtC-fM-tuP">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Wr-79-b4a">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SuperheroViewCell" rowHeight="240" id="3bj-5B-I7M" customClass="SuperheroViewCell" customModule="SuperheroLeague_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="240"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3bj-5B-I7M" id="f2u-cq-oKt">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="240"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0jL-Th-hyg">
+                                    <size key="itemSize" width="393" height="246"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SuperheroViewCell" id="pm5-bu-ar2" customClass="SuperheroViewCell" customModule="SuperheroLeague_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="246"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bGx-id-hkj">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="246"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vz4-N0-XlU" userLabel="Shadow View">
-                                                    <rect key="frame" x="20" y="11" width="353" height="218"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lW1-EB-KY4" userLabel="Shadow View">
+                                                    <rect key="frame" x="8" y="8" width="377" height="230"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mn3-vS-zMK" userLabel="Card View">
-                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="218"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ja-x6-CUw" userLabel="Card View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="377" height="230"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ua-0I-xuH">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="218"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8lI-Qm-bIw">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="230"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHp-RM-9Ox">
-                                                                    <rect key="frame" x="0.0" y="182" width="353" height="36"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEE-oa-KBf">
+                                                                    <rect key="frame" x="0.0" y="194" width="377" height="36"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.59667322019867552" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.59667322020000002" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -54,30 +61,31 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
                                             </subviews>
-                                        </tableViewCellContentView>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="393" height="246"/>
                                         <connections>
-                                            <outlet property="avatarImageView" destination="7ua-0I-xuH" id="PKp-Xy-Ssk"/>
-                                            <outlet property="cardView" destination="mn3-vS-zMK" id="i4G-uE-vxp"/>
-                                            <outlet property="nameLabel" destination="xHp-RM-9Ox" id="Fpq-fE-jcn"/>
-                                            <outlet property="shadowView" destination="Vz4-N0-XlU" id="hCh-X1-Oso"/>
-                                            <segue destination="5c7-Jq-Rdf" kind="show" identifier="detail" id="EWH-b7-3U9"/>
+                                            <outlet property="avatarImageView" destination="8lI-Qm-bIw" id="LFn-RP-oBF"/>
+                                            <outlet property="cardView" destination="9ja-x6-CUw" id="vZc-CM-5hj"/>
+                                            <outlet property="nameLabel" destination="eEE-oa-KBf" id="sj4-kj-Flz"/>
+                                            <outlet property="shadowView" destination="lW1-EB-KY4" id="Fkp-9t-UxS"/>
+                                            <segue destination="5c7-Jq-Rdf" kind="show" identifier="Detail" id="ngH-FA-mc9"/>
                                         </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rtC-fM-tuP" secondAttribute="bottom" id="DyD-jG-hiK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rtC-fM-tuP" secondAttribute="trailing" id="Mso-NW-jvo"/>
-                            <constraint firstItem="rtC-fM-tuP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="v7F-NO-lbg"/>
-                            <constraint firstItem="rtC-fM-tuP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z3M-kf-nDL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Wr-79-b4a" secondAttribute="bottom" id="Tpk-3u-cZa"/>
+                            <constraint firstItem="7Wr-79-b4a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ywq-dg-gOF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Wr-79-b4a" secondAttribute="trailing" id="iWJ-ie-4Yr"/>
+                            <constraint firstItem="7Wr-79-b4a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s8x-Cb-Equ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Superhero League" id="2w3-CF-VVO"/>
                     <connections>
-                        <outlet property="tableView" destination="rtC-fM-tuP" id="5XJ-Hk-WG0"/>
+                        <outlet property="collectionView" destination="7Wr-79-b4a" id="Unl-h2-G20"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
